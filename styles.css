@@ -72,14 +72,34 @@ table {
 
 /* -------- 1. LAYOUT -------- */
 
-	body { text-align: center; font:300 20px/1.7 'Roboto Condensed';}
+	body { 
+			text-align: center; 
+			font:300 20px/1.7 'Roboto Condensed';
+		}
 
-	.header { display: flex; justify-content:center; align-items:center;}
+	.header { 
+				display: flex; 
+				justify-content:center; 
+				align-items:center;
+			}
 
-	.navbar { display: flex; align-items:center; justify-content:center;}
+	.navbar { 	
+				display: flex; 
+				align-items:center; 
+				justify-content:center;
+			}
 
-	.list-tratamientos { display: flex; align-items:center; justify-content:center;}
-	.list-tratamientos figure { display: flex; justify-content:center; align-items:center; flex-flow:column;}
+	.list-tratamientos { 
+							display: flex; 
+							align-items:center; 
+							justify-content:center;
+						}
+	.list-tratamientos figure { 
+								display: flex; 
+								justify-content:center; 
+								align-items:center; 
+								flex-flow:column;
+							}
 
 /* -------- 2. GENERIC ITEMS -------- */
 
@@ -95,19 +115,46 @@ table {
 
 /* -------- 3. PARTS OF WEB -------- */
 
-	.content { padding: 80px 0;}
+	.content { 
+				padding: 80px 0;
+			}
 
-		.who { background: #acc233; color: #fff;}
-			.who p { max-width: 1055px; margin: 0 auto;}
+	.who { 
+			background: #F0B429; 
+			color: #fff;
+		}
 
-		.tratamientos { background:#566119; color: #fff; }
+	.who p { 
+				max-width: 1055px; 
+				margin: 0 auto;
+			}
 
-		.tarifas { background: url(images/dummy-tarifas.jpg) no-repeat center top; color: #fff; text-align: left;}
-			.contain { max-width: 1055px; margin: 0 auto;}
-			.tarifas p { max-width: 450px;}
+	.tratamientos { 
+					background:  #F47920; 
+					color: #fff; 
+				}
 
-		.localizacion { color:#566119; padding-bottom: 0;}
-			.localizacion .map img { max-width: 100%; width: 100%;}
+	.tarifas { 
+				background: url(images/dummy-tarifas.jpg) no-repeat center top; 
+				color: #fff; 
+				text-align: left;
+			}
+
+	.contain { 
+				max-width: 1055px; 
+				margin: 0 auto;
+			}
+
+	.tarifas p { max-width: 450px;}
+
+	.localizacion { 
+					color:#566119; 
+					padding-bottom: 0;
+				}
+	.localizacion .map img { 
+								max-width: 100%; 
+								width: 100%;
+							}
 
 /* -------- 4. LIST -------- */
 
