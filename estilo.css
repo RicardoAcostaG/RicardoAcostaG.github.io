@@ -1,0 +1,296 @@
+/****
+STYLES GUIDE:
+0. RESET
+1. LAYOUT
+2. GENERIC ITEMS
+3. PARTS OF WEB
+4. LIST
+5. FORM
+6. ANIMATIONS
+-----------------
+COLORS:
+verde pistacho => 	#acc233;
+verde oscuro => 	#566119;
+verde cielo => 		#d6e199;
+blanco =>			#fff;
+*/
+
+
+/* -------- 0. RESET -------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* { box-sizing:border-box;}
+
+
+/* -------- 1. LAYOUT -------- */
+
+	body { 
+			text-align: center; 
+			font:300 20px/1.7 'Roboto Condensed';
+		}
+
+	.header { 
+				display: flex; 
+				justify-content:center; 
+				align-items:center;
+			}
+
+	.navbar { 	
+				display: flex; 
+				align-items:center; 
+				justify-content:center;
+			}
+
+	.list-tratamientos { 
+							display: flex; 
+							align-items:center; 
+							justify-content:center;
+						}
+	.list-tratamientos figure { 
+								display: flex; 
+								justify-content:center; 
+								align-items:center; 
+								flex-flow:column;
+							}
+
+/* -------- 2. GENERIC ITEMS -------- */
+
+	.header { height: 450px; background: url(images/dummy-header.jpg) no-repeat center top; background-size: cover;}
+	.navbar { height: 63px; background: #acc233; border-bottom: 1px dashed #d6e199;}
+	.navbar a { padding: 0 20px; color: #fff; text-decoration: none; text-transform: uppercase; font: 20px 'Stint Ultra Condensed';}
+
+	.title { margin-bottom: 40px; font: 60px 'Stint Ultra Condensed'; text-transform: uppercase;}
+
+	p { margin-bottom: 40px;}
+
+	.btn { display: inline-block; padding: 10px 40px; border:2px solid #fff; color: #fff; text-decoration: none;}
+
+/* -------- 3. PARTS OF WEB -------- */
+
+	.content { 
+				padding: 80px 0;
+			}
+
+	.who { 
+			background: #F0B429; 
+			color: #fff;
+		}
+
+	.who p { 
+				max-width: 1055px; 
+				margin: 0 auto;
+			}
+
+	.tratamientos { 
+					background:  #F47920; 
+					color: #fff; 
+				}
+
+	.tarifas { 
+				background: url(images/dummy-tarifas.jpg) no-repeat center top; 
+				color: #fff; 
+				text-align: left;
+			}
+
+	.contain { 
+				max-width: 1055px; 
+				margin: 0 auto;
+			}
+
+	.tarifas p { max-width: 450px;}
+
+	.localizacion { 
+					color:#566119; 
+					padding-bottom: 0;
+				}
+	.localizacion .map img { 
+								max-width: 100%; 
+								width: 100%;
+							}
+
+/* -------- 4. LIST -------- */
+
+	.list-tratamientos figure { position: relative; width: 100px; height: 100px; }
+	.list-tratamientos figure:after { content: " "; position: absolute; left: 0; top: 0; z-index: 0; background: #fff; border-radius: 50%; width: 100px; height: 100px;}
+		.list-tratamientos img { position: relative; z-index: 1;}
+
+	.list-tratamientos li { padding: 0 30px;}
+	.list-tratamientos figcaption { position: absolute; left: 0; right: 0; bottom: -40px;}
+	
+/* -------- 5. FORM -------- */
+
+/* -------- 6. ANIMATIONS -------- */
+
+/* -------- Munu lateral -------- */
+input#abrir-cerrar {
+	visibility:hidden;
+	position: absolute;
+	top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+	text-align: -webkit-auto;
+	cursor:pointer;
+	padding: 1rem;
+	background-color:#333;
+	color:#fff;
+	display:inline-block;
+	width:100%;
+	/*position: fixed;*/
+
+}
+
+.cerrar {
+	display:none;
+}
+
+#sidebar {
+	width:0;
+}
+
+#contenido {
+	margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #sidebar {
+	width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+	margin-left:300px;
+	transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+	display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+	display:none;
+}
+
+.sidebar {
+	position: fixed;
+	height: 100%;
+	width: 0;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: #00324b;
+	overflow-x: hidden;
+	transition: 0.4s;
+	padding: 1rem 0;
+	box-sizing:border-box;
+	text-align: -webkit-auto;
+}
+
+.sidebar .boton-cerrar {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	font-size: 2rem;
+	display: block;
+	padding: 0;
+	line-height: 1.5rem;
+	margin: 0;
+	height: 32px;
+	width: 32px;
+	text-align: center;	
+	vertical-align: top;
+}
+
+.sidebar ul, .sidebar li{
+	margin:0;
+	padding:0;
+	list-style:none inside;
+}
+
+.sidebar ul {
+	margin-top: 1px;
+	margin-left: 40px;
+	margin-bottom: 1px;
+	/*margin: 4rem auto;*/
+	display: block;
+	width: 80%;
+	min-width:200px;
+}
+
+.sidebar a {
+	display: block;
+	font-size: 120%;
+	color: #eee;
+	text-decoration: none;
+
+}
+
+.sidebar a:hover{
+	color:#fff;
+	background-color: #f90;
+
+}
+
+h1 {
+	color:#f90;
+	font-size:180%;
+	font-weight:normal;
+}
+#contenido {
+	transition: margin-left .4s;
+	padding: 1rem;
+}
+
+.abrir-cerrar {
+	color: #2E88C7;
+	font-size:1rem;   
+}
+
